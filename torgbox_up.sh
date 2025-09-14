@@ -29,7 +29,7 @@ process_data() {
     local arh=$(basename "$link")
     local archive_path="$source_dir/$arh"
 
-    # Скачиваем архив во временный файл для проверки
+    # Скачивание архива во временный файл для проверки
     local temp_archive="$source_dir/temp_$arh"
     if ! curl -s -o "$temp_archive" "$link"; then
         echo "Ошибка скачивания для $type"
