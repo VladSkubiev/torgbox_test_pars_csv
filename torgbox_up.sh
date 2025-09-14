@@ -79,7 +79,7 @@ process_data() {
     # Переход на awk вместо sed (тест на оптимизацию скорости)
     awk -F';' -v type="$type" -v batch_size="$batch_size" -v source_dir="$source_dir" -v file_date="$file_date" '
     BEGIN {
-        # Чтение загаловка
+        # Чтение заголовка
         getline
         for (i=1; i<=NF; i++) {
             gsub(/[\r"]/, "", $i)
