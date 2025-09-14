@@ -37,7 +37,7 @@ process_data() {
         return 1
     fi
 
-    # Проверяем изменения
+    # Проверка изменений
     if [ -f "$archive_path" ]; then
         local old_checksum=$(sha256sum "$archive_path" 2>/dev/null | cut -d' ' -f1)
         local new_checksum=$(sha256sum "$temp_archive" | cut -d' ' -f1)
